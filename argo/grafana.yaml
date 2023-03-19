@@ -11,15 +11,15 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   sources:
-  - repoURL: https://github.com/saluteslim/tera-eks
+  - repoURL: https://github.com/AbdulmalikAgboola/Third-Semester
     targetRevision: HEAD
-    ref: exam
+    ref: graf
   - repoURL: https://grafana.github.io/helm-charts
     chart: grafana
     targetRevision: 6.52.2
     helm:
       valueFiles:
-        - $exam/apps/apps-values/grafana.yaml         
+        - $graf/argo/values/grafana.yaml         
   syncPolicy:
     automated:
       prune: true
