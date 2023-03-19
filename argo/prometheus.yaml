@@ -11,20 +11,18 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   sources:
-    - repoURL: https://github.com/saluteslim/tera-eks.git
+    - repoURL: https://github.com/AbdulmalikAgboola/Third-Semester
       targetRevision: HEAD
-      ref: exam
+      ref: prom
     - repoURL: https://prometheus-community.github.io/helm-charts/
       chart: prometheus
       targetRevision: 19.7.2
       helm:
         valueFiles:
-          - $exam/apps/apps-values/prometheus.yaml
+          - $prom/argo/values/prometheus.yaml
   syncPolicy:
     automated:
       prune: true
       selfHeal: true
     syncOptions:
       - CreateNamespace=true
-  
-  progressDeadlineSeconds: 600
