@@ -39,5 +39,5 @@ spec:
   ports:
   - name: http
     port: 80
-    targetPort: 430
+    targetPort: 443
   type: LoadBalancer
